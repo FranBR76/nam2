@@ -1,17 +1,30 @@
+
 * {
-  margin-inline: 100px;
-  /* padding: 0; */
-  /* box-sizing: border-box; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
   background-color: mediumslateblue;
-  font-family: Arial;
+  padding: 20px;
+  text-align: justify;
+  padding-bottom: 0;
 }
 
 .card {
     /* background: rgba(255, 255, 255, 0.08);  */
+  max-width: 900px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 16px;
+
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(12px);
-  border-radius: 16px;
-  padding: 30px;
+  
+
   /* width: 300px; */
   color: rgba(255, 255, 255, 0.9);  /* branco mais suave */
   text-shadow: 0 1px 3px rgba(0,0,0,0.2); /* destaca texto sem borda */
@@ -21,18 +34,24 @@
 }
 
 a {
-    text-align: center;
-    margin-inline: 400px;
-    padding: 20px;
+    margin-inline:240px;
+    
     border-radius: 30px;
     text-decoration: none;
     color: white;
     font-size: 4em;
     background-color: darkblue;
+
+    display: inline-block;
+    text-align: center;
+    padding: 15px 30px;
+    margin: 20px auto;
+    font-size: 2em;
 }
 
 html {
 scroll-behavior: smooth;
+scroll-padding-top: 100px;
 }
 
 a:hover {
@@ -111,7 +130,8 @@ body mark {
 } */
 .carrossel img {
   width: 80vw;
-  height: 80vh;
+  height: auto;
+  border-radius: 20px;
   object-fit: contain;
  /* opcional: fundo para imagens menores */
     
@@ -139,25 +159,34 @@ img {
   }
 }
 
+@media (max-width: 600px) {
+  .card {
+    padding: 20px;
+  }
 
-@media only screen and (max-width:600px) {
-   
-    * {
-        margin-inline: 8px;
+  a {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    width: 100%;
+  }
 
-        /* float:left; */
-        
-        
-    }
+  a:hover {
+    font-size: 1.3em;
+  }
 
-    a {
-        margin-inline: 10px;
-        font-size: 1em;
-        width: 120%;
-    }
+  .carrossel img {
+    width: 100vw;
+    height: auto;
+  }
 
-    a:hover {
-        font-size: 1em;
-    }
-
+  h1, h2 {
+    text-align: justify;
+    font-size: 1.3em;
+  }
 }
+
+/* TABLETS E NOTEBOOKS PEQUENOS */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .card {
+    max-width: 80%;
+  }}
