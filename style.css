@@ -199,6 +199,14 @@ img {
     text-align: justify;
     font-size: 1.3em;
   }
+
+  .video-popup {
+    display: none;
+  }
+
+  .video-popup:target {
+    display: block;
+  }
 }
 
 /* TABLETS E NOTEBOOKS PEQUENOS */
