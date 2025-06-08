@@ -1,0 +1,163 @@
+* {
+  margin-inline: 100px;
+  /* padding: 0; */
+  /* box-sizing: border-box; */
+  background-color: mediumslateblue;
+  font-family: Arial;
+}
+
+.card {
+    /* background: rgba(255, 255, 255, 0.08);  */
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 30px;
+  /* width: 300px; */
+  color: rgba(255, 255, 255, 0.9);  /* branco mais suave */
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2); /* destaca texto sem borda */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+}
+
+a {
+    text-align: center;
+    margin-inline: 400px;
+    padding: 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 4em;
+    background-color: darkblue;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+a:hover {
+    transition: all ease-in-out 0.5s;
+    color: aliceblue;
+    /* background-color: black; */
+    background: linear-gradient(90deg, #ff00cc, #3333ff, #00ffee);
+    font-size: 4.2em;
+
+
+}
+
+
+audio {
+    margin: auto;
+    margin-block: 100px;
+    width: 100%;
+    
+    
+}
+
+body h1, h2 {
+    color: white;
+    
+    text-align: justify;
+}
+
+.cinza {
+    background-color: gray;
+
+    color: white;
+    padding: 5px;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.cor {
+    background: linear-gradient(90deg, #ff00cc, #3333ff, #00ffee);
+    color: white;
+    padding: 0 5;
+    margin: 0;
+    border-radius: 10px;
+}
+
+
+body small {
+    margin: 0;
+    font-size: 20px;
+}
+
+body mark {
+    color: white;
+    padding: 5px;
+    margin: 0;
+    border-radius: 10px;
+    background-color:darkblue;
+}
+
+
+.carrossel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-left: 0px
+}
+
+.carrossel {
+  display: flex;
+  animation: deslizar 360s linear infinite; /* 2 segundos por imagem */
+  width: calc(100vw * 80);
+  
+}
+/* 
+.carrossel:hover {
+  animation-play-state: paused;
+} */
+.carrossel img {
+  width: 80vw;
+  height: 80vh;
+  object-fit: contain;
+ /* opcional: fundo para imagens menores */
+    
+  
+
+}
+
+img {
+    border-radius: 120px;
+}
+/* 
+.carrossel img {
+    width: 100vw; 
+  flex-shrink: 0;
+  object-fit: cover;
+  height: 100vh;
+} */
+
+@keyframes deslizar {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-7900vw); /* 100vw * (80 - 1) */
+  }
+}
+
+
+@media only screen and (max-width:600px) {
+   
+    * {
+        margin-inline: 8px;
+
+        /* float:left; */
+        
+        
+    }
+
+    a {
+        margin-inline: 10px;
+        font-size: 1em;
+        width: 120%;
+    }
+
+    a:hover {
+        font-size: 1em;
+    }
+
+}
